@@ -1,0 +1,48 @@
+body
+{
+  background-image: url("assets/city.jpg");
+  background-position: center;
+    background-size: cover;
+}
+
+#logo{
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    margin: 0;
+    padding: 0px;
+background-image: url("assets/ed.jpg");
+background-size: cover;
+}
+
+.jumbotron img{
+    height: 200px;
+    width: 500px;
+    margin: 0;
+    float: left; 
+}
+
+#nav
+{
+  background: transparent;
+  text-align: center;
+  height: 650px;
+  padding: 0;
+  margin:0;
+  /* border: 2px solid red; */
+}
+
+#nav h1
+{
+  font-size: 40px;
+}
+
+#nav2
+{
+  background-image: url("assets/ck.jpg");
+  background-size: cover;
+  height: 850px;
+  width: 100%;
+  text-align: center;
+}
