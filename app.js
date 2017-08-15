@@ -75,3 +75,26 @@ $('.scroll').on('click', function (e) {
         scrollTop: $(this.hash).offset().top
     }, 1500);
 });
+var database = firebase.database().ref();
+
+function save() {
+    var name = $('#gmailname').val();
+    var gmail = $("#gmail").val();
+    console.log(name + " " + gmail);
+
+    var value = {
+        NAME: name,
+        GMAIL: gmail
+    }
+    database.push(value);
+}
+    database.on("child_added", function (rowData) {
+        var row = rowData.val();
+        var name = row.NAME;
+        var gmail = row.GMAIL;
+        console.log(name + gmail);
+        $('#h42').empty();
+        $('#h42').append("Thank you for signing up " + name);
+    })
+
+save();

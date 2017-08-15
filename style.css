@@ -3,6 +3,8 @@ body
   background-image: url("assets/city.jpg");
   background-position: center;
     background-size: cover;
+    height: 960px;
+    width: 100%;
 }
 
 #logo{
@@ -226,4 +228,38 @@ li {
   margin: 10px 20px;
   text-transform: uppercase;
   letter-spacing: 4px;
+}
+br {
+   display: block;
+   margin: 10px;
+}
+
+#img1{
+  height: 290px;
+  width: 300px;
+  margin: auto;
+}
+#img2{
+  height: 290px;
+  width: 300px;
+  margin: right;
+}
+
+#img3{
+  height: 290px;
+  width: 300px;
+  margin: auto;
+}
+#img4{
+  height: 290px;
+  width: 300px;
+  margin: right;
+}
+
+#h41{
+  color:yellow;
+}
+
+#h42{
+  color: yellow;
 }
