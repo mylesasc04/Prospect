@@ -4,23 +4,23 @@ $(document).ready(function () {
         dataType: 'json',
         success: function (results) {
             // first scholarship
-            var scholarship1 = results.data[0][10];
+            var scholarship1 = results.data[31][10];
             // scholarship location = results.data[0][9];
             // scholarship fte = results.data[0][12];
             // scholarship value = 
             var schoLocation = results.data[0][9];
-            var schoFTE = results.data[0][12];
-            var schoValue = results.data[0][13];
+            var schoFTE = results.data[31][12];
+            var schoValue = results.data[31][13];
             // second scholarship
-            var scholarship2 = results.data[1][10];
-            var schoLocation1 = results.data[1][9];
-            var schoFTE1 = results.data[1][12];
-            var schoValue1 = results.data[1][13];
+            var scholarship2 = results.data[155][10];
+            var schoLocation1 = results.data[155][9];
+            var schoFTE1 = results.data[155][12];
+            var schoValue1 = results.data[155][13];
 
 
             // console.log(scholarship1);
-            $('.scholarship-list').append('<div class="scholarship">' + scholarship1 + '<br>' + '<div class="btn" data-popup-open="popup-1" href="#">' + " Sector Group: " + schoLocation + '<br>' + "FTE: " + schoFTE + '<br>' + "Money donated: " + schoValue + '</div>');
-            $('.scholarship-list').append('<div class="scholarship">' + scholarship2 + '<br>' + " Sector Group: " + schoLocation1 + '<br>' + "FTE: " + schoFTE1 + '<br>' + "Money donated: " + schoValue1 + '</div>');
+            $('.scholarship-list').append('<div class="scholarship">' + scholarship1 + '<br>' + '<div class="btn" data-popup-open="popup-1" href="#">' + " Sector Group: " + schoLocation + '<br>' + "FTE: " + schoFTE + '<br>' + "$$$: " + schoValue + '</div>');
+            $('.scholarship-list').append('<div class="scholarship">' + scholarship2 + '<br>' + '<div class="btn" data-popup-open="popup-2" href="#">' + " Sector Group: " + schoLocation1 + '<br>' + "FTE: " + schoFTE1 + '<br>' + "$$$: " + schoValue1 + '</div>');
 
             //   $('.scholarship-list').append('<div class="scholarship">' + scholarship2+'<br>'+" Location: "+schoLocation1 +'<br>'+"FTE: "+schoFTE1+'<br>'+"Money donated: "+schoValue1+ '</div>');
 
@@ -52,4 +52,26 @@ $(document).ready(function () {
         });
     });
 
+});
+
+$(window).scroll(function () {
+    // 100 = The point you would like to fade the nav in.
+
+    if ($(window).scrollTop() > 100) {
+
+        $('.bg').addClass('show');
+
+    } else {
+
+        $('.bg').removeClass('show');
+
+    };
+});
+
+$('.scroll').on('click', function (e) {
+    e.preventDefault()
+
+    $('html, body').animate({
+        scrollTop: $(this.hash).offset().top
+    }, 1500);
 });
