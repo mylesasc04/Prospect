@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 
             // console.log(scholarship1);
-            $('.scholarship-list').append('<div class="scholarship">' + scholarship1 + '<br>' + " Sector Group: " + schoLocation + '<br>' + "FTE: " + schoFTE + '<br>' + "Money donated: " + schoValue + '</div>');
+            $('.scholarship-list').append('<div class="scholarship">' + scholarship1 + '<br>' + '<div class="btn" data-popup-open="popup-1" href="#">' + " Sector Group: " + schoLocation + '<br>' + "FTE: " + schoFTE + '<br>' + "Money donated: " + schoValue + '</div>');
             $('.scholarship-list').append('<div class="scholarship">' + scholarship2 + '<br>' + " Sector Group: " + schoLocation1 + '<br>' + "FTE: " + schoFTE1 + '<br>' + "Money donated: " + schoValue1 + '</div>');
 
             //   $('.scholarship-list').append('<div class="scholarship">' + scholarship2+'<br>'+" Location: "+schoLocation1 +'<br>'+"FTE: "+schoFTE1+'<br>'+"Money donated: "+schoValue1+ '</div>');
@@ -32,6 +32,24 @@ $(document).ready(function () {
             // console.log(scholarship2);
             // $('h3').append(scholarship2);
         }
+    });
+    // This is the new function added.
+    $(function () {
+        //----- OPEN
+        $('[data-popup-open]').on('click', function (e) {
+            var targeted_popup_class = jQuery(this).attr('data-popup-open');
+            $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+            e.preventDefault();
+        });
+
+        //----- CLOSE
+        $('[data-popup-close]').on('click', function (e) {
+            var targeted_popup_class = jQuery(this).attr('data-popup-close');
+            $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+            e.preventDefault();
+        });
     });
 
 });
