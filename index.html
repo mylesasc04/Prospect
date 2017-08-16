@@ -22,106 +22,106 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="style.css"> 
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png" />
 
 </head>
 <body>
-    <div class="jumbotron" id="logo">
-        <a href="index.html">
-            <img src="assets/logo.png" alt="">
-        </a>
-    </div>
-<!--nav  -->
-    <div class="fixed">
+    <div class="container-fluid" id="top">
+        <div class="jumbotron" id="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" id="logoImage">
+            </a>
+        </div>
+        <!--nav  -->
+        <div class="fixed">
 
-        <div class="bg transition">
+            <div class="bg transition">
 
-            <li>
-                <a class="bttn1" href="#logo">Scholarships</a>
-            </li>
-            <li>
-                <a class="bttn2" href="#nav2">About Us</a>
-            </li>
-            <li>
-                <a class="bttn3" href="https://github.com/mylesasc04/Prospect" role="button">Download</a>
-            </li>
+                <li>
+                    <a class="bttn1" href="#logo">Scholarships</a>
+                </li>
+                <li>
+                    <a class="bttn2" href="#nav2">About Us</a>
+                </li>
+                <li>
+                    <a class="bttn3" href="https://github.com/mylesasc04/Prospect" role="button">Download</a>
+                </li>
 
+            </div>
+        </div>
+        <div id="signIn">
+            <h4 id = "h41"> Sign up for our the latest scolarships !</h4>
+            <input id="gmailname" type="text" placeholder="Enter Name">
+            <input id="gmail" type="text" placeholder= "Enter email">
+            <input type="button" onclick="save()" value="Save">
+            <h4 id = "h42"> Thank you </h4>
+        </div>
+        <!--nav  -->
 
+        <div class="container" id="nav"> 
+            <h1>"Providing Opportunities for Children Of Color to have access to scholarships"</h1>
+            <h2 id="second"> Scholarships: </h2>
+            <div class="container" id="scholarships">
+                <div class="row scholarship-list"></div>
+                <button class="button" type="button" >
+                    <a href="#nav2" id="scrolld">SCROLL DOWN</a>
+                </button>
+            </div>
+        </div>
+        <!-- <button type="button" class="btn btn-info btn-block">Block-level Button</button> -->
+        <div class="popup" data-popup="popup-1">
+            <div class="popup-inner">
+                <h2>NYS Scholarships for Academic Excellence</h2>
+                <p>The NYS STEM Incentive Program provides a full SUNY tuition scholarship to the top 10 percent of students in each NYS high
+                school if they pursue a STEM degree in an associate’s or bachelor’s degree program and agree to live in NYS and work
+                in a STEM field in NYS for five years after graduation.
+                Eligibility: <br> <br>
+
+                An applicant must: be a NYS resident and have resided in NYS for 12 continuous months prior to the beginning of the fall
+                college term;<br> <br> be a U.S. citizen or eligible non-citizen; <br> <br>be a high school senior/recent high school graduate who will be
+                enrolled full time at a SUNY or CUNY college, including community colleges and the statutory colleges at Cornell University
+                and Alfred University, beginning in the fall term following his or her high school graduation;<br> <br>be ranked in the top 10 percent
+                of his/her high school graduating class at a NYS high school;<br> <br>be matriculated in an approved undergraduate program leading
+                to a degree in Science, Technology, Engineering or Mathematics at a SUNY or CUNY college;<br> <br>earn a cumulative grade point average
+                (GPA) of 2.5 or higher each term after the first semester;<br> <br>execute a Service Contract agreeing to reside and work in the
+                field of Science, Technology, Engineering or Mathematics in NYS for five years. View the terms and conditions of the service
+                contract.
+                </p>
+                <img id="img1" src="assets/3.PNG">
+                <img id="img2" src="assets/comments.PNG">
+                <p><a data-popup-close="popup-1" href="#">Close</a></p>
+                <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+            </div>
+        </div>
+        <div class="popup" data-popup="popup-2">
+            <div class="popup-inner">
+                <h2>New York Lottery - Leaders of Tomorrow Scholarship</h2>
+                <p>The Purpose of this scholarship is to help New York State seniors who plan to attend college in state. <br> <br> The number of scholarships varies as it may be renewed. <br> Award Amount: USD $4,000 <br> <br> To apply for this scholarship talk to your high school guidance counselors. Minimum GPA not required. </p>
+                <img id = "img3" src="assets/4.PNG">
+                <img id = "img4" src="assets/comments.PNG">
+                <p><a data-popup-close="popup-2" href="#">Close</a></p>
+                <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+            </div>
         </div>
     </div>
-    <div id="signIn">
-    <h4 id = "h41"> Sign up for our the latest scolarships !</h4>
-<input id="gmailname" type="text" placeholder="Enter Name">
-<input id="gmail" type="text" placeholder= "Enter email">
-<input type="button" onclick="save()" value="Save">
-<h4 id = "h42"> Thank you </h4>
-    </div>
-<!--nav  -->
-
-    <div class="container" id="nav"> 
-        <h1>"Providing Opportunities for Children Of Color to have access to scholarships"</h1>
-<h2 id="second"> Scholarships: </h2>
-<h3>
-    <div class="row scholarship-list">
-
-    </div>
-</h3>
-    <button class="button" type="button" ><a href="#nav2" id="scrolld">SCROLL DOWN</a></button>
-    </div>
-<!-- <button type="button" class="btn btn-info btn-block">Block-level Button</button> -->
-<div class="popup" data-popup="popup-1">
-    <div class="popup-inner">
-        <h2>NYS Scholarships for Academic Excellence</h2>
-        <p>The NYS STEM Incentive Program provides a full SUNY tuition scholarship to the top 10 percent of students in each NYS high
-        school if they pursue a STEM degree in an associate’s or bachelor’s degree program and agree to live in NYS and work
-        in a STEM field in NYS for five years after graduation.
-    
-     Eligibility: <br> <br>
-
-An applicant must: be a NYS resident and have resided in NYS for 12 continuous months prior to the beginning of the fall
-college term;<br> <br> be a U.S. citizen or eligible non-citizen; <br> <br>be a high school senior/recent high school graduate who will be
-enrolled full time at a SUNY or CUNY college, including community colleges and the statutory colleges at Cornell University
-and Alfred University, beginning in the fall term following his or her high school graduation;<br> <br>be ranked in the top 10 percent
-of his/her high school graduating class at a NYS high school;<br> <br>be matriculated in an approved undergraduate program leading
-to a degree in Science, Technology, Engineering or Mathematics at a SUNY or CUNY college;<br> <br>earn a cumulative grade point average
-(GPA) of 2.5 or higher each term after the first semester;<br> <br>execute a Service Contract agreeing to reside and work in the
-field of Science, Technology, Engineering or Mathematics in NYS for five years. View the terms and conditions of the service
-contract.
-    </p>
-<img id = "img1" src="assets/3.PNG">
-<img id = "img2" src="assets/comments.PNG">
-        <p><a data-popup-close="popup-1" href="#">Close</a></p>
-        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
-    </div>
-</div>
-<div class="popup" data-popup="popup-2">
-    <div class="popup-inner">
-        <h2>New York Lottery - Leaders of Tomorrow Scholarship</h2>
-        <p>The Purpose of this scholarship is to help New York State seniors who plan to attend college in state. <br> <br> The number of scholarships varies as it may be renewed. <br> Award Amount: USD $4,000 <br> <br> To apply for this scholarship talk to your high school guidance counselors. Minimum GPA not required. </p>
-        <img id = "img3" src="assets/4.PNG">
-        <img id = "img4" src="assets/comments.PNG">
-        <p><a data-popup-close="popup-2" href="#">Close</a></p>
-        <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
-    </div>
-</div>
-
 
     <div class="container" id="nav2">
-<h1> About Us</h1>
-<h2> "We're all about providing an opportunity to the unfortunate. Propsect NYC seeks to find accessible scholarships towards minorities.
-We also use a rating system to determine the best scholarship for all students. Scholarships with a high success rate and
-positive comments equates to a better ranking and visa versa. Through All Star Code, we are able to create a website that
-helps the community save money and make higher education accessible. Through this website, we want everyone to get a scholarship." <br> <br> -Prospect New York City Team
-</h2>
-<button class="button" type="button"><a href="#logo" id="scrollu">SCROLL UP</a></button>
+        <h1> About Us</h1>
+        <h2> "We're all about providing an opportunity to the unfortunate. Propsect NYC seeks to find accessible scholarships towards minorities.
+        We also use a rating system to determine the best scholarship for all students. Scholarships with a high success rate and
+        positive comments equates to a better ranking and visa versa. Through All Star Code, we are able to create a website that
+        helps the community save money and make higher education accessible. Through this website, we want everyone to get a scholarship." <br> <br> -Prospect New York City Team
+        </h2>
+        <button class="button" type="button"><a href="#logo" id="scrollu">SCROLL UP</a></button>
     </div>
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="app.js"></script>
-<link rel="stylesheet" href="style.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  
 </body>
 </html>

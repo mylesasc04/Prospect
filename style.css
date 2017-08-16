@@ -1,14 +1,14 @@
-body
+#top
 {
   background-image: url("assets/city.jpg");
   background-position: center;
     background-size: cover;
-    height: 960px;
+    height: 880px;
     width: 100%;
 }
 
 #logo{
-    height: 200px;
+    height: 100px;
     width: 100%;
     text-align: center;
     background: transparent;
@@ -17,19 +17,18 @@ body
 background-size: cover;
 }
 
-.jumbotron img{
-    height: 200px;
-    width: 500px;
+#logoImage{
+    height: 100%;
     margin: 0;
     float: left; 
 }
 
 #nav
 {
-   background: transparent; 
+  background: transparent; 
   text-align: center;
-  height: 600px;
-   width: 100%;
+  height: 300px;
+  width: 100%;
   padding: 0;
   margin:0;
   /* border: 2px solid red; */
@@ -107,6 +106,12 @@ background-size: cover;
   text-shadow: black 3px 3px;
 }
 
+#scholarships
+{
+  width: 100%;
+  margin: 0 auto;
+}
+
 .scholarship-list{
     max-width: 800px;
   margin: auto;
@@ -122,6 +127,7 @@ background-size: cover;
 .button{
   color: white;
   background: black;
+  margin-top: 30px;
 }
 
 /*Added Popup Button CSS  */
@@ -182,11 +188,11 @@ background-size: cover;
     background-color:transparent;
 }
 
-container {
+/* container {
   width: 100;
   height: 2000px;
   font-family: 'Trebuchet Ms';
-}
+} */
 
 .bg {
   background: black;
