@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-signin-client_id" content="1061578409482-bu0c6jk6075ijlmqhuvjpik7o11431ma.apps.googleusercontent.com">
     <title>Prospect</title>
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
     <script>
@@ -25,6 +26,8 @@
      <link rel="stylesheet" href="style.css"> 
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png" />
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </head>
 <body>
@@ -61,49 +64,101 @@
         <!--nav  -->
 
         <div class="container" id="nav"> 
-            <h1>"Providing Opportunities for Children Of Color to have access to scholarships"</h1>
+            <h1>"Providing Opportunities for students Of Color to have access to scholarships"</h1>
             <h2 id="second"> Scholarships: </h2>
+
+            <button id="hide">Hide</button>
+            <button id="show">See Scholarships</button>
+
             <div class="container" id="scholarships">
                 <div class="row scholarship-list"></div>
-                <button class="button" type="button" >
+                <!-- <button class="button" type="button" >
                     <a href="#nav2" id="scrolld">SCROLL DOWN</a>
-                </button>
+                </button> -->
             </div>
         </div>
         <!-- <button type="button" class="btn btn-info btn-block">Block-level Button</button> -->
-        <div class="popup" data-popup="popup-1">
-            <div class="popup-inner">
-                <h2>NYS Scholarships for Academic Excellence</h2>
-                <p>The NYS STEM Incentive Program provides a full SUNY tuition scholarship to the top 10 percent of students in each NYS high
-                school if they pursue a STEM degree in an associate’s or bachelor’s degree program and agree to live in NYS and work
-                in a STEM field in NYS for five years after graduation.
-                Eligibility: <br> <br>
+    <div class="popup" data-popup="popup-1">
+        <div class="popup-inner">
+            <h2>NYS Scholarships for Academic Excellence</h2>
+            <a id="schoAE" href="https://www.hesc.ny.gov/pay-for-college/financial-aid/types-of-financial-aid/nys-grants-scholarships-awards/nys-scholarships-for-academic-excellence.html"
+                target="_blank">Apply</a>
+            <p> Have graduated from a New York State high school <br> <br> Study full time and be matriculated in an approved
+                undergraduate program of study in a New York State post secondary institution <br> <br> Be in good academic
+                standing <br> <br> Not be in default on any State or federal student loan or on any repayment of state awards
+                <br> <br> Be U.S. citizens or qualifying noncitizens <br> <br> Be New York State residents <br> <br>
+            </p>
 
-                An applicant must: be a NYS resident and have resided in NYS for 12 continuous months prior to the beginning of the fall
-                college term;<br> <br> be a U.S. citizen or eligible non-citizen; <br> <br>be a high school senior/recent high school graduate who will be
-                enrolled full time at a SUNY or CUNY college, including community colleges and the statutory colleges at Cornell University
-                and Alfred University, beginning in the fall term following his or her high school graduation;<br> <br>be ranked in the top 10 percent
-                of his/her high school graduating class at a NYS high school;<br> <br>be matriculated in an approved undergraduate program leading
-                to a degree in Science, Technology, Engineering or Mathematics at a SUNY or CUNY college;<br> <br>earn a cumulative grade point average
-                (GPA) of 2.5 or higher each term after the first semester;<br> <br>execute a Service Contract agreeing to reside and work in the
-                field of Science, Technology, Engineering or Mathematics in NYS for five years. View the terms and conditions of the service
-                contract.
-                </p>
-                <img id="img1" src="assets/3.PNG">
-                <img id="img2" src="assets/comments.PNG">
-                <p><a data-popup-close="popup-1" href="#">Close</a></p>
-                <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
-            </div>
+            <img id="img1" src="assets/3.PNG">
+            <img id="img2" src="assets/comments.PNG">
+            <p><a data-popup-close="popup-1" href="#">Close</a></p>
+            <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
         </div>
-        <div class="popup" data-popup="popup-2">
-            <div class="popup-inner">
-                <h2>New York Lottery - Leaders of Tomorrow Scholarship</h2>
-                <p>The Purpose of this scholarship is to help New York State seniors who plan to attend college in state. <br> <br> The number of scholarships varies as it may be renewed. <br> Award Amount: USD $4,000 <br> <br> To apply for this scholarship talk to your high school guidance counselors. Minimum GPA not required. </p>
-                <img id = "img3" src="assets/4.PNG">
-                <img id = "img4" src="assets/comments.PNG">
-                <p><a data-popup-close="popup-2" href="#">Close</a></p>
-                <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
-            </div>
+    </div>
+    <div class="popup" data-popup="popup-2">
+        <div class="popup-inner">
+            <h2>New York Lottery - Leaders of Tomorrow Scholarship</h2>
+            <a id="schoAE2" href="http://www.admissionglobal.com/usa_scholarships/application.aspx" target="_blank">Apply</a>
+            <p>The Purpose of this scholarship is to help New York State seniors who plan to attend college in state. <br> <br>                The number of scholarships varies as it may be renewed. <br> Award Amount: USD $4,000 <br> <br> To apply
+                for this scholarship talk to your high school guidance counselors. Minimum GPA not required. </p>
+            <img id="img3" src="assets/4.PNG">
+            <img id="img4" src="assets/comments.PNG">
+            <p><a data-popup-close="popup-2" href="#">Close</a></p>
+            <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+        </div>
+    </div>
+    <div class="popup" data-popup="popup-3">
+        <div class="popup-inner">
+            <h2>NYS Science,Technology, Engineering and Mathematics Incentive Program
+            </h2>
+            <a id="schoAE3" href="https://www.hesc.ny.gov/pay-for-college/financial-aid/types-of-financial-aid/nys-grants-scholarships-awards/nys-science-technology-engineering-and-mathematics-stem-incentive-program.html"
+                target="_blank">Apply</a>
+            <p>The NYS STEM Incentive Program provides a full SUNY tuition scholarship to the top 10 percent of Minority students in
+                each NYS high school if they pursue a STEM degree in an associate’s or bachelor’s degree program and agree
+                to live in NYS and work in a STEM field in NYS for five years after graduation. Eligibility: <br> <br> *An
+                applicant must: be a NYS resident and have resided in NYS for 12 continuous months prior to the beginning
+                of the fall college term;<br>* be a U.S. citizen or eligible non-citizen; <br>* be a high school senior/recent
+                high school graduate who will be enrolled full time at a SUNY or CUNY college, including community colleges
+                and the statutory colleges at Cornell University and Alfred University, beginning in the fall term following
+                his or her high school graduation;<br>* be ranked in the top 10 percent of his/her high school graduating
+                class at a NYS high school;<br>* be matriculated in an approved undergraduate program leading to a degree
+                in Science, Technology, Engineering or Mathematics at a SUNY or CUNY college;<br>* earn a cumulative grade
+                point average (GPA) of 2.5 or higher each term after the first semester;<br>* execute a Service Contract
+                agreeing to reside and work in the field of Science, Technology, Engineering or Mathematics in NYS for five
+                years. View the terms and conditions of the service contract.
+            </p>
+            <img id="img3" src="assets/4.PNG">
+            <img id="img4" src="assets/comments.PNG">
+            <p><a data-popup-close="popup-3" href="#">Close</a></p>
+            <a class="popup-close" data-popup-close="popup-3" href="#">x</a>
+        </div>
+    </div>
+    <div class="popup" data-popup="popup-4">
+        <div class="popup-inner">
+            <h2>Flight 3407 Memorial Scholarship</h2>
+            <a id="schoAE2" href="https://www.unigo.com/scholarships/all/ny-flight-3407-memorial-scholarships/1003234" target="_blank">Apply</a>
+            <p>Flight 3407 Memorial Scholarships provide funds to help meet the cost of attending college for Minority student. The award covers
+                up to four years of full-time undergraduate study (or five years in an approved five-year bachelor's degree
+                program). Based on the 2015-16 academic year, the maximum total annual award for students living on campus
+                is $22,487; the maximum total annual award for total annual award for commuter students is $15,037. Receipt
+                of other grants and scholarships may reduce the award. The total of all aid received cannot be greater than
+                the student's Title IV cost of attendance. <br> <br> Approximately 25 awards are given each year.</p>
+            <img id="img3" src="assets/4.PNG">
+            <img id="img4" src="assets/comments.PNG">
+            <p><a data-popup-close="popup-4" href="#">Close</a></p>
+            <a class="popup-close" data-popup-close="popup-4" href="#">x</a>
+        </div>
+    </div>
+    <div class="popup" data-popup="popup-5">
+        <div class="popup-inner">
+            <h2>New York Lottery - Leaders of Tomorrow Scholarship #2</h2>
+            <a id="schoAE2" href="http://www.admissionglobal.com/usa_scholarships/application.aspx" target="_blank">Apply</a>
+            <p>The Purpose of this scholarship is to help New York State seniors who plan to attend college in state. <br> <br>                The number of scholarships varies as it may be renewed. <br> Award Amount: USD $4,000 <br> <br> To apply
+                for this scholarship talk to your high school guidance counselors. Minimum GPA not required. </p>
+            <img id="img3" src="assets/4.PNG">
+            <img id="img4" src="assets/comments.PNG">
+            <p><a data-popup-close="popup-5" href="#">Close</a></p>
+            <a class="popup-close" data-popup-close="popup-5" href="#">x</a>
         </div>
     </div>
 
@@ -114,7 +169,7 @@
         positive comments equates to a better ranking and visa versa. Through All Star Code, we are able to create a website that
         helps the community save money and make higher education accessible. Through this website, we want everyone to get a scholarship." <br> <br> -Prospect New York City Team
         </h2>
-        <button class="button" type="button"><a href="#logo" id="scrollu">SCROLL UP</a></button>
+        <!-- <button class="button" type="button"><a href="#logo" id="scrollu">SCROLL UP</a></button> -->
     </div>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
