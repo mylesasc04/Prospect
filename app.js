@@ -19,8 +19,8 @@ $(document).ready(function () {
 
 
             // console.log(scholarship1);
-            $('.scholarship-list').append('<div class="scholarship">' + scholarship1 + '<br>' + '<div class="btn" data-popup-open="popup-1" href="#">' + " Sector Group: " + schoLocation + '<br>' + "FTE: " + schoFTE + '<br>' + "$$$: " + schoValue + '</div>');
-            $('.scholarship-list').append('<div class="scholarship">' + scholarship2 + '<br>' + '<div class="btn" data-popup-open="popup-2" href="#">' + " Sector Group: " + schoLocation1 + '<br>' + "FTE: " + schoFTE1 + '<br>' + "$$$: " + schoValue1 + '</div>');
+             $('.scholarship-list').append('<div class="scholarship">' + scholarship1 + '<br>' + '<div class="btn" data-popup-open="popup-1" href="#">' + " Sector Group of Scholarship: " + schoLocation + '<br>' + "FTE: " + schoFTE + '<br>' + "$$$ (Dollars): " + schoValue + '</div>');
+             $('.scholarship-list').append('<div class="scholarship">' + scholarship2 + '<br>' + '<div class="btn" data-popup-open="popup-2" href="#">' + " Sector Group of Scholarship: " + schoLocation1 + '<br>' + "FTE: " + schoFTE1 + '<br>' + "$$$ (Dollars): " + schoValue1 + '</div>');
 
             //   $('.scholarship-list').append('<div class="scholarship">' + scholarship2+'<br>'+" Location: "+schoLocation1 +'<br>'+"FTE: "+schoFTE1+'<br>'+"Money donated: "+schoValue1+ '</div>');
 
